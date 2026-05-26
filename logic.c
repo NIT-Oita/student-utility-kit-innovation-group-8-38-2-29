@@ -58,5 +58,7 @@ void QUIZ_MODE(void){
             printf("入力モード終了\n");
             break;
         }
+
+        j++;
     }
 }
