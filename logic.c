@@ -27,7 +27,7 @@ void INPUT_MODE(void){
                 break;
             }
         }else{
-            printf("要領に達した為，入力モード終了\n");
+            printf("容量に達した為，入力モード終了\n");
             break;
         }
     }
