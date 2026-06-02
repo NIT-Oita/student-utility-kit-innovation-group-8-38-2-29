@@ -49,7 +49,7 @@ void QUIZ_MODE(void){
             printf("正解！\n");
         }else{
             printf("不正解...\n");
-            printf("答え:%255s\n",cheet[i].answer);
+            printf("答え: %255s\n",cheet[i].answer);
         }
 
         printf("入力モードを終了しますか？\n「はい」なら「1」,「いいえ」なら(それ以外)を入力:");
