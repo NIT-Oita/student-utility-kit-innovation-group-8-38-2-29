@@ -13,7 +13,7 @@ static void tango_nyuryoku_gamen(void){
         printf("=============単語入力画面===============\n");
         printf("======================================\n");
 
-        logic_input_word();//仮
+        logic_INPUT_MODE();
 
         printf("Enterキーを押すとメニュー選択画面に戻ります");
         while(getchar()!='\n');
@@ -25,7 +25,7 @@ static void test_gamen(void){
         printf("==============テスト画面===============\n");
         printf("======================================\n");
 
-        logic_start_test();
+        logic_QUIZ_MODE();
         printf("Enterキーを押すとメニュー選択画面に戻ります");
         while(getchar()!='\n');
         getchar();
