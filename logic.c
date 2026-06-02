@@ -26,6 +26,8 @@ void INPUT_MODE(void){
             if(judge == 1){
                 printf("入力モード終了\n");
                 break;
+            }else{
+                while(getchar() != '\n');
             }
         }else{
             printf("容量に達した為，入力モード終了\n");
