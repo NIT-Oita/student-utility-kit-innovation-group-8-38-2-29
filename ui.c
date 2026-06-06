@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 #include"logic.h"
 #include"ui.h"
 
@@ -10,10 +11,10 @@ static clearScreen(){
 static void tango_nyuryoku_gamen(void){
         clearScreen();
         printf("======================================\n");
-        printf("=============単語入力画面===============\n");
+        printf("=============単語入力画面==============\n");
         printf("======================================\n");
 
-        logic_INPUT_MODE();
+        INPUT_MODE();
 
         printf("Enterキーを押すとメニュー選択画面に戻ります");
         while(getchar()!='\n');
@@ -25,7 +26,7 @@ static void test_gamen(void){
         printf("==============テスト画面===============\n");
         printf("======================================\n");
 
-        logic_QUIZ_MODE();
+        QUIZ_MODE();
         printf("Enterキーを押すとメニュー選択画面に戻ります");
         while(getchar()!='\n');
         getchar();
@@ -33,6 +34,8 @@ static void test_gamen(void){
 
 void start_app(void){
     int sentaku;
+    char menu_buf[16];
+
     while(1){
     clearScreen();
         printf("======================================\n");
@@ -43,14 +46,12 @@ void start_app(void){
         printf("3:終了\n");
         printf("選択してください: ");
 
-        if (scanf("%d",&sentaku)!=1){
-            clearScreen();
-            printf("[エラー]数字を入力してください\n");
-            printf("\nEnterキーを押すとメニューに戻ります...");
-            while(getchar()!='\n');
-            getchar();
+
+        if(fgets(menu_buf,sizeof(menu_buf),stdin)==NULL){
             continue;
         }
+
+        sentaku=atoi(menu_buf);
 
         if(sentaku==3){
             printf("システムを終了します\n");
@@ -61,10 +62,10 @@ void start_app(void){
             clearScreen();
             printf("[エラー]正しい番号を入力してください\n");
             printf("\nEnterキーを押すとメニューに戻ります...");
-            while(getchar()!='\n');
             getchar();
             continue;
         }
+        
         clearScreen();
         if(sentaku==1){
             tango_nyuryoku_gamen();
