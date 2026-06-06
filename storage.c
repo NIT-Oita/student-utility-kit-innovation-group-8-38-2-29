@@ -1,19 +1,11 @@
 #include <stdio.h>
 #include "logic.h"
 int load_tasks(const char *path,
-<<<<<<< HEAD
-Task *list, int max) {
-FILE *fp = fopen(path, "r");
-if (!fp) return 0;        /* ファイルがまだ無い */
-char line[256];
-fgets(line, sizeof line, fp);   /* ヘッダ行を読み飛ばす. */
-=======
 Card *list, int max) {
 FILE *fp = fopen(path, "r");
 if (!fp) return 0;        /* ファイルがまだ無い */
 char line[256];
 fgets(line, sizeof line, fp);   /* ヘッダ行を読み飛ばす */
->>>>>>> 1cb702f93e331247080312b07bb0033005fa48d0
 int n = 0;
 while (n < max &&
 fscanf(fp, "%255[^\n] %255[^\n]",
