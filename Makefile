@@ -13,7 +13,7 @@ run: $(TARGET)
 	./$(TARGET)
 
 clean:
-	rm -f *.o $(TARGET) $(TARGET).exe
+	-rmdir /s /q *.o $(TARGET) $(TARGET).exe
 
 zip:
 	zip -r submit.zip *.c *.h Makefile data/
