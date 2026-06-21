@@ -15,6 +15,7 @@ void trim_newline(char *str){
 
 void INPUT_MODE(void){
     int judge;
+    int c;
 
 
     while(i < 128){
@@ -43,6 +44,8 @@ void INPUT_MODE(void){
             printf("容量に達した為，入力モード終了\n");
             break;
         }
+
+        while((c = getchar()) != '\n' && c != EOF);
     }
 }
 
@@ -51,6 +54,7 @@ void QUIZ_MODE(void){
     
     int JUDGE;
     char ANSWER[256];
+    int c;
 
 
     if(i == 0){
@@ -82,5 +86,7 @@ void QUIZ_MODE(void){
         }
 
         j++;
+
+        while((c = getchar()) != '\n' && c != EOF);
     }
 }
