@@ -54,8 +54,6 @@ void QUIZ_MODE(void){
     char ANSWER[256];
     int c;
 
-    while ((c = getchar()) != '\n' && c != EOF);
-
 
     if(i == 0){
         printf("単語が登録されていません\n先に入力モードをやってください\n");
@@ -79,7 +77,6 @@ void QUIZ_MODE(void){
 
         printf("クイズモードを終了しますか？\n「はい」なら「1」,「いいえ」なら(それ以外)を入力:");
         scanf("%d", &JUDGE);
-        while ((c = getchar()) != '\n' && c != EOF);
 
         if(JUDGE == 1){
             printf("クイズモード終了\n");
