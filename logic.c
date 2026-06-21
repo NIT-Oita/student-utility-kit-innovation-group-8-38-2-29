@@ -15,7 +15,6 @@ void trim_newline(char *str){
 
 void INPUT_MODE(void){
     int judge;
-    int c;
 
 
     while(i < 128){
@@ -52,7 +51,6 @@ void QUIZ_MODE(void){
     
     int JUDGE;
     char ANSWER[256];
-    int c;
 
 
     if(i == 0){
