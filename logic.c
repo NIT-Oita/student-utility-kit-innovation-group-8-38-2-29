@@ -88,5 +88,7 @@ void QUIZ_MODE(void){
         j++;
 
         while((c = getchar()) != '\n' && c != EOF);
+
+        
     }
 }
