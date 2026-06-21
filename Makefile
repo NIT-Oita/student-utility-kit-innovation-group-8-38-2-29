@@ -4,7 +4,7 @@ TARGET = taskman
 OBJS = main.o ui.o logic.o storage.o
 
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $(OBJS) -fexec-charset=CP932
 
 %.o: %.c logic.h
 	$(CC) $(CFLAGS) -c $< -o $@
