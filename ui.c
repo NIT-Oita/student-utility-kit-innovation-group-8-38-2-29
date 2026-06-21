@@ -4,7 +4,7 @@
 #include"logic.h"
 #include"ui.h"
 
-static clearScreen(){
+void static clearScreen(){
     system("cls");
 }
 
