@@ -17,7 +17,6 @@ void INPUT_MODE(void){
     int judge;
     int c;
 
-    while ((c = getchar()) != '\n' && c != EOF);
 
     while(i < 128){
         printf("単語を入力\n");
@@ -36,7 +35,6 @@ void INPUT_MODE(void){
         if(i < 128){
             printf("入力モードを終了しますか？\n「はい」なら「1」,「いいえ」なら(それ以外)を入力:");
             scanf("%d", &judge);
-            while ((c = getchar()) != '\n' && c != EOF);
 
             if(judge == 1){
                 printf("入力モード終了\n");
