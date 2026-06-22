@@ -18,7 +18,7 @@ void INPUT_MODE(void){
     int c;
 
 
-    while(i < 128){
+    while(i < MAX_TASKS){
         printf("単語を入力\n");
         fgets(cheet[i].word, sizeof(cheet[i].word), stdin);
         trim_newline(cheet[i].word);
@@ -32,7 +32,7 @@ void INPUT_MODE(void){
 
         i++;
 
-        if(i < 128){
+        if(i < MAX_TASKS){
             printf("入力モードを終了しますか？\n「はい」なら「1」,「いいえ」なら(それ以外)を入力:");
             scanf("%d", &judge);
 
