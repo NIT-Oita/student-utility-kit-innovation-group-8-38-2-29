@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -O2 -std=c11
-TARGET = taskman
+TARGET = memorization
 OBJS = main.o ui.o logic.o storage.o
 
 $(TARGET): $(OBJS)
@@ -13,7 +13,7 @@ run: $(TARGET)
 	./$(TARGET)
 
 clean:
-	rm -f $(OBJS) $(TARGET) $(TARGET).exe
+	-del /f /q *.o $(TARGET) $(TARGET).exe
 
 zip:
 	zip -r submit.zip *.c *.h Makefile data/

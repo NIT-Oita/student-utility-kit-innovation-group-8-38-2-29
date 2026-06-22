@@ -4,8 +4,9 @@
 #include"logic.h"
 #include"ui.h"
 
-void static clearScreen(){
+static void clearScreen(){
     system("cls");
+    return;
 }
 
 static void tango_nyuryoku_gamen(void){
