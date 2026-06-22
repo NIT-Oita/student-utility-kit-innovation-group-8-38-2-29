@@ -4,8 +4,7 @@
 typedef struct {
  char word[256];
  char answer[256];
-} Task;
-int task_urgency(const Task *t,
- const char *today);
-void task_sort(Task *list, int n);
+} Card;
+void INPUT_MODE(void);
+void QUIZ_MODE(void);
 #endif
