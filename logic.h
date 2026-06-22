@@ -1,6 +1,6 @@
 #ifndef LOGIC_H
 #define LOGIC_H
-#define MAX_TASKS 100
+#define MAX_TASKS 128
 typedef struct {
  char word[256];
  char answer[256];
