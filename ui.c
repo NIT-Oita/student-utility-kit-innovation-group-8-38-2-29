@@ -4,7 +4,7 @@
 #include"logic.h"
 #include"ui.h"
 
-static void clearScreen(){
+static void clearScreen(){//画面を消す
     system("cls");
     return;
 }
@@ -38,7 +38,7 @@ void start_app(void){
     char menu_buf[16];
 
     while(1){
-    clearScreen();
+    clearScreen();//画面を1度消す
         printf("======================================\n");
         printf("==========英単語テストシステム==========\n");
         printf("======================================\n");
@@ -54,7 +54,7 @@ void start_app(void){
 
         sentaku=atoi(menu_buf);
 
-        if(sentaku==3){
+        if(sentaku==3){//3が押されたとき
             printf("システムを終了します\n");
             break;
         }
@@ -68,9 +68,9 @@ void start_app(void){
         }
         
         clearScreen();
-        if(sentaku==1){
+        if(sentaku==1){//1が押されたとき
             tango_nyuryoku_gamen();
-        }else if(sentaku ==2){
+        }else if(sentaku ==2){//2が押されたとき
             test_gamen();
         }
         
